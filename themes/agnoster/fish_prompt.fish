@@ -11,6 +11,16 @@
 # set -g theme_display_user yes
 # set -g default_user your_normal_user
 
+## Set this for right side ruby Prompt
+# set -l ruby_version $yellow(_rb_prompt)
+# set -l ruby_version "$ruby_version$normal in "
+
+# write ruby_prompt=true to set ENV variable
+
+if ENV=["ruby_prompt"]
+  set -l ruby_version $yellow(_rb_prompt)
+  set -l ruby_version "$ruby_version$normal in "
+end
 
 
 set -g current_bg NONE
